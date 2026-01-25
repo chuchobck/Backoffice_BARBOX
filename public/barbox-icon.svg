@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="url(#gradient)"/>
+  <path d="M32 16C28 16 24 18 24 22V42C24 46 28 48 32 48C36 48 40 46 40 42V22C40 18 36 16 32 16Z" fill="white" opacity="0.9"/>
+  <ellipse cx="32" cy="22" rx="8" ry="4" fill="white"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#C75040"/>
+      <stop offset="100%" stop-color="#AA3A2E"/>
+    </linearGradient>
+  </defs>
+</svg>

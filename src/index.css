@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-barbox-border;
+  }
+  body {
+    @apply bg-barbox-cream text-barbox-wine font-sans;
+  }
+}
+
+@layer components {
+  /* Botones */
+  .btn-primary {
+    @apply px-6 py-2.5 rounded-lg font-semibold text-white;
+    @apply bg-gradient-to-r from-barbox-terracotta to-barbox-terracotta-dark;
+    @apply hover:from-barbox-terracotta-dark hover:to-barbox-terracotta-darker;
+    @apply shadow-terracotta hover:shadow-terracotta-lg;
+    @apply transition-all duration-200 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 rounded-lg font-semibold;
+    @apply border-2 border-barbox-terracotta text-barbox-terracotta;
+    @apply hover:bg-barbox-terracotta hover:text-white;
+    @apply transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-2.5 rounded-lg font-semibold text-barbox-terracotta;
+    @apply hover:bg-barbox-terracotta/10;
+    @apply transition-all duration-200;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl border border-barbox-border;
+    @apply shadow-lg shadow-black/5;
+    @apply hover:shadow-xl hover:shadow-black/10;
+    @apply transition-all duration-200;
+  }
+
+  .card-header {
+    @apply bg-barbox-cream px-6 py-4 border-b border-barbox-border;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-barbox-wine font-display;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-2.5 rounded-lg;
+    @apply border-2 border-barbox-border;
+    @apply focus:border-barbox-terracotta focus:ring-2 focus:ring-barbox-terracotta/20;
+    @apply outline-none transition;
+    @apply placeholder:text-gray-400;
+  }
+
+  /* Badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-success {
+    @apply bg-success text-white;
+  }
+
+  .badge-warning {
+    @apply bg-warning text-white;
+  }
+
+  .badge-danger {
+    @apply bg-danger text-white;
+  }
+
+  .badge-info {
+    @apply bg-info text-white;
+  }
+
+  .badge-terracotta {
+    @apply bg-barbox-terracotta text-white;
+  }
+
+  /* Table */
+  .table {
+    @apply w-full;
+  }
+
+  .table thead {
+    @apply bg-barbox-cream border-b border-barbox-border;
+  }
+
+  .table th {
+    @apply px-4 py-3 text-left text-sm font-semibold text-barbox-wine;
+  }
+
+  .table tbody tr {
+    @apply border-b border-barbox-border hover:bg-barbox-cream/50 transition cursor-pointer;
+  }
+
+  .table tbody tr:nth-child(even) {
+    @apply bg-barbox-cream/20;
+  }
+
+  .table td {
+    @apply px-4 py-3;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes pulse-terracotta {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(199, 80, 64, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(199, 80, 64, 0);
+  }
+}
+
+.pulse-action {
+  animation: pulse-terracotta 2s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6EDE7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C75040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AA3A2E;
+}
